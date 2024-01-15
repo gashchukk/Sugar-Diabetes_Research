@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="Viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="algorithms,programming,competitive programming,contests,algorithmic competitions,coding,icpc,ioi,math,data structures,graph theory">
+    <meta name="description" content="Algotester is a modern competitive programming platform, with a large archive of algorithmic problems, educational content, and regular competitions for high school and university students">
+    <title>B-1. &#x420;&#x435;&#x446;&#x435;&#x43F;&#x442; | &#x423;&#x43C;&#x43E;&#x432;&#x438; | &#x410;&#x43B;&#x433;&#x43E;&#x442;&#x435;&#x441;&#x442;&#x435;&#x440;</title>
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/bundle.min.css?v=CCAFYXHslEd3HhR-LaXrxI_qDzDhDIfOCEkcn2LnU3w" />
+    <link rel="stylesheet" href="/css/adminlte.min.css?v=9D0l77-8-rPmFLJMsf_BhRS5HiSReQP9BITFcyVsxuc" />
+    <link rel="stylesheet" href="/css/site.min.css?v=BL5d0vKlQtDOEJFXZl5dak14nXLbg_dVT5sUj6CWM-A" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZMEERSFGT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KZMEERSFGT');
+    </script>
+</head>
+<body class="fixed hold-transition skin-blue sidebar-mini ">
+<div class="wrapper">
+    <header class="main-header">
+    <!-- Logo -->
+    <a href="/uk" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><img style="padding:10px" src="/images/logo-mini.svg"/></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><img style="padding:5px" src="/images/logo-large-h.svg"/></span>
+    </a>
+
+    <nav class="navbar navbar-static-top">
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-header pull-right">
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    
+    <li class="visible-lg"><a target="blank" href="https://www.youtube.com/c/algotester"><i class="fa fa-sm fa-youtube-play"></i></a></li>
+    <li class="visible-lg"><a target="blank" href="https://www.facebook.com/algotester"><i class="fa fa-sm fa-facebook-square"></i></a></li>
+    <li class="visible-lg"><a target="blank" href="https://twitter.com/algotester"><i class="fa fa-sm fa-twitter-square"></i></a></li>
+    <li class="visible-lg"><a target="blank" href="https://t.me/algotester"><i class="fa fa-sm fa-telegram"></i></a></li>
+    <li class="dropdown hidden-lg">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fa fa-sm fa-bullhorn"></i>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-left">
+            <li><a target="blank" href="https://www.youtube.com/c/algotester"><i class="fa fa-lg fa-youtube-play"></i>YouTube</a></li>
+            <li><a target="blank" href="https://www.facebook.com/algotester"><i class="fa fa-lg fa-facebook-square"></i>Facebook</a></li>
+            <li><a target="blank" href="https://twitter.com/algotester"><i class="fa fa-lg fa-twitter-square"></i>Twitter</a></li>
+            <li><a target="blank" href="https://t.me/algotester"><i class="fa fa-lg fa-telegram"></i>Telegram</a></li>
+        </ul>
+    </li>
+                    <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <img src="/flags/transparent.gif" class="flag flag-ua" />
+        <span class="hidden-xs hidden-sm hidden-md">
+            &nbsp;
+            &#x443;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x430;
+        </span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+            <li>
+                <a href="/en/ContestProblem/DisplayWithEditor/134075">
+                    <img src="/flags/transparent.gif" class="flag flag-gb" />
+                    &nbsp;
+                    english
+                </a>
+            </li>
+            <li>
+                <a href="/uk/ContestProblem/DisplayWithEditor/134075">
+                    <img src="/flags/transparent.gif" class="flag flag-ua" />
+                    &nbsp;
+                    &#x443;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x430;
+                </a>
+            </li>
+    </ul>
+</li>
+
+                    <li class="dropdown hidden-xs">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-sm fa-info-circle"></i>
+    </a>
+    <ul class="dropdown-menu bg-white" role="menu">
+            <li><a href="/uk/Home/ReleaseNotes">Algotester 3.3</a></li>
+            <li><a href="/uk/Home/ReleaseNotes">Build 426</a></li>
+            <li><a href="/uk/Home/ReleaseNotes">2023-11-28</a></li>
+    </ul>
+</li>
+                        <li class="dropdown user user-menu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-sm fa-user-circle"></i>
+            <span class="hidden-xs hidden-sm hidden-md">
+                &nbsp;
+                Bohdan Hashchuk
+            </span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right">
+            <li class="user-header">
+                <i class="fa fa-5x fa-user-circle"></i>
+                <p>
+                    Bohdan Hashchuk
+                    <small>&#x417;&#x430;&#x440;&#x435;&#x454;&#x441;&#x442;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43E; 19.09.2022 07:48:59</small>
+                </p>
+            </li>
+            <li class="user-body">
+                <div class="row">
+                    <div class="col-xs-6 text-center">
+                        <a href="/uk/Account/Manage/294425?tab=teams">&#x41C;&#x43E;&#x457; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x438;</a>
+                    </div>
+                    <div class="col-xs-6 text-center">
+                        <a href="/uk/ProblemSolution/MyQueue">&#x41C;&#x43E;&#x457; &#x440;&#x43E;&#x437;&#x432;&#x27;&#x44F;&#x437;&#x43A;&#x438;</a>
+                    </div>
+                </div>
+            </li>
+            <li class="user-footer">
+                <div class="pull-left">
+                    <a href="/uk/Account/Manage/294425" class="btn btn-default btn-flat">
+                        <span class="fa fa-user"></span>
+                        &nbsp;
+                        O&#x431;&#x43B;&#x456;&#x43A;&#x43E;&#x432;&#x438;&#x439; &#x437;&#x430;&#x43F;&#x438;&#x441;
+                    </a>
+                </div>
+                <div class="pull-right">
+<form action="/uk/Account/LogOut" class="form-horizontal" id="logOutForm" method="post">                        <a href="javascript:document.getElementById('logOutForm').submit()" class="btn btn-default btn-flat">
+                            <span class="fa fa-sign-out"></span>
+                            &nbsp;
+                            &#x412;&#x438;&#x439;&#x442;&#x438;
+                        </a>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8HXrFbc3PFVBoPLc-XNRwk0yE16ZYcq6gbM0T9Uqjw6i4-XcxAkqwoj37mh_9Ai9mouHqvxRPc8h6KB9IFGLDs3d3Y-qxAJv6w3280QxkFHRdN_M23rRVblSqqQ5J8CRdj0xhHt5G0MMnLDUus0jqeMl-aNM54SJDoP5Q9jv8lwrKBu-d9DNbMKNYbdRXIon4g" /></form>                </div>
+            </li>
+        </ul>
+    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-header pull-left">
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+    <li>
+        <a href="/uk/Inquiry/Create">
+            <i class="fa fa-sm fa-envelope"></i>
+            <span class="hidden-xs hidden-sm">&nbsp;&#x417;&#x432;&#x27;&#x44F;&#x436;&#x456;&#x442;&#x44C;&#x441;&#x44F; &#x437; &#x43D;&#x430;&#x43C;&#x438;</span>
+        </a>
+    </li>
+</ul>
+
+                <ul class="nav navbar-nav hidden-xs">
+    <li>
+        <a href="/uk/Home/Sponsors">
+            <i class="fa fa-sm fa-battery-three-quarters"></i>
+            <span class="hidden-xs hidden-sm">
+                &nbsp;
+                &#x421;&#x43F;&#x43E;&#x43D;&#x441;&#x43E;&#x440;&#x438;
+            </span>
+        </a>
+    </li>
+</ul>
+
+                <ul class="nav navbar-nav">
+    <li class="btn-warning">
+        <a href="/uk/Home/Donate">
+            <i class="fa fa-sm fa-handshake-o"></i>
+            <span class="hidden-xs">&nbsp;&#x41F;&#x456;&#x434;&#x442;&#x440;&#x438;&#x43C;&#x430;&#x442;&#x438;</span>
+        </a>
+    </li>
+</ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+    <aside class="main-sidebar">
+    <section class="sidebar">
+        <ul class="sidebar-menu" data-widget="tree">
+            <li>
+                <a href="/uk/Home/About">
+                    <i class="fa fa-info-circle"></i>
+                    <span>&#x41F;&#x440;&#x43E; &#x43D;&#x430;&#x441;</span>
+                </a>
+            </li>
+            <li>
+                <a href="/uk/Home/Statistics">
+                    <i class="fa fa-bar-chart"></i>
+                    <span>&#x421;&#x442;&#x430;&#x442;&#x438;&#x441;&#x442;&#x438;&#x43A;&#x430;</span>
+                </a>
+            </li>
+            <li>
+                <a href="/uk/Home/Help">
+                    <i class="fa fa-question-circle"></i>
+                    <span>&#x414;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x430;</span>
+                </a>
+            </li>
+            <li>
+                <a href="/uk/Home/Analysis">
+                    <i class="fa fa-book"></i>
+                    <span>&#x420;&#x43E;&#x437;&#x431;&#x456;&#x440;</span>
+                </a>
+            </li>
+            <li>
+                <a href="/uk/Home/Events">
+                    <i class="fa fa-calendar"></i>
+                    <span>&#x41F;&#x43E;&#x434;&#x456;&#x457;</span>
+                </a>
+            </li>
+                <li class="header"><span class="text-uppercase">bohdan_hashchuk</span></li>
+    <li>
+        <a href="/uk/ProblemSolution/MyQueue">
+            <i class="fa fa-file-code-o"></i> <span>&#x41C;&#x43E;&#x457; &#x440;&#x43E;&#x437;&#x432;&#x27;&#x44F;&#x437;&#x43A;&#x438;</span>
+        </a>
+    </li>
+    <li>
+        <a href="/uk/Account/Manage/294425?tab=teams">
+            <i class="fa fa-users"></i> <span>&#x41C;&#x43E;&#x457; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x438;</span>
+        </a>
+    </li>
+
+            <li class="header"><span class="text-uppercase">&#x410;&#x440;&#x445;&#x456;&#x432;</span></li>
+<li>
+    <a href="/uk/ArchiveProblem">
+        <i class="fa fa-files-o"></i> <span>&#x417;&#x430;&#x434;&#x430;&#x447;&#x456;</span>
+    </a>
+</li>
+<li>
+    <a href="/uk/ArchiveProblem/Rank">
+        <i class="fa fa-trophy"></i> <span>&#x420;&#x435;&#x439;&#x442;&#x438;&#x43D;&#x433;</span>
+    </a>
+</li>
+<li>
+    <a href="/uk/ArchiveProblem/SolutionQueue">
+        <i class="fa fa-list"></i> <span>&#x427;&#x435;&#x440;&#x433;&#x430; &#x440;&#x43E;&#x437;&#x432;&#x27;&#x44F;&#x437;&#x43A;&#x456;&#x432;</span>
+    </a>
+</li>
+            
+         </ul>
+    </section>
+</aside>
+
+    <div class="content-wrapper">
+        <section class="content-header">
+                <h1>
+                <span class='page-header'>B-1. &#x420;&#x435;&#x446;&#x435;&#x43F;&#x442; | &#x423;&#x43C;&#x43E;&#x432;&#x438;</span>
+    </h1>
+        <ol class="breadcrumb">
+                    <li>
+                        <a href="/uk/Contest/Display/110499">&#x423;&#x43C;&#x43E;&#x432;&#x438;</a>
+                    </li>
+                    <li>
+                        <a href="/uk/ContestProblem/Display/134075">B-1</a>
+                    </li>
+        </ol>
+
+        </section>
+        <section class="content">
+            
+<div class="nav-tabs-custom">
+    <ul class="nav nav-tabs">
+        <li>
+            <a href="/uk/Contest/Display/110499" class="text-muted">
+                ← &#x41F;&#x43E;&#x432;&#x435;&#x440;&#x43D;&#x443;&#x442;&#x438;&#x441;&#x44C;
+            </a>
+        </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134056" class="text-muted">
+
+                    A-0
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134057" class="text-muted">
+                            <span class="fa fa-lg fa-check text-success"></span>
+
+                    A-1
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134058" class="text-muted">
+
+                    A-2
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134059" class="text-muted">
+
+                    A-3
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134060" class="text-muted">
+                            <span class="fa fa-lg fa-check text-success"></span>
+
+                    A-4
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134061" class="text-muted">
+
+                    A-5
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134062" class="text-muted">
+
+                    A-6
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134063" class="text-muted">
+
+                    A-7
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134064" class="text-muted">
+
+                    A-8
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134065" class="text-muted">
+
+                    A-9
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134066" class="text-muted">
+
+                    A-10
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134067" class="text-muted">
+
+                    A-11
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134068" class="text-muted">
+
+                    A-12
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134069" class="text-muted">
+
+                    A-13
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134070" class="text-muted">
+
+                    A-14
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134071" class="text-muted">
+
+                    A-15
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134072" class="text-muted">
+
+                    A-16
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134073" class="text-muted">
+
+                    A-17
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134074" class="text-muted">
+
+                    B-0
+                </a>
+            </li>
+            <li class="active">
+                <a href="/uk/ContestProblem/Display/134075" class="text-muted">
+                            <span class="fa fa-lg fa-check text-success"></span>
+
+                    B-1
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134076" class="text-muted">
+
+                    B-2
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134077" class="text-muted">
+
+                    B-3
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134078" class="text-muted">
+
+                    B-4
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134079" class="text-muted">
+
+                    B-5
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134080" class="text-muted">
+                            <span class="fa fa-lg fa-check text-success"></span>
+
+                    B-6
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134081" class="text-muted">
+                            <span class="fa fa-lg fa-check text-success"></span>
+
+                    B-7
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134082" class="text-muted">
+
+                    B-8
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134083" class="text-muted">
+
+                    B-9
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134084" class="text-muted">
+
+                    B-10
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134085" class="text-muted">
+
+                    B-11
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134086" class="text-muted">
+
+                    B-12
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134087" class="text-muted">
+
+                    B-13
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134088" class="text-muted">
+
+                    B-14
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134089" class="text-muted">
+
+                    B-15
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134090" class="text-muted">
+
+                    B-16
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134091" class="text-muted">
+
+                    B-17
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134092" class="text-muted">
+
+                    B-18
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134093" class="text-muted">
+
+                    B-19
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134094" class="text-muted">
+
+                    A-18
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134095" class="text-muted">
+
+                    B-20
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134096" class="text-muted">
+
+                    B-21
+                </a>
+            </li>
+            <li class="">
+                <a href="/uk/ContestProblem/Display/134097" class="text-muted">
+
+                    A-19
+                </a>
+            </li>
+            <li class="pull-right">
+                <a href="/uk/Contest/ViewScoreboard/110499" class="text-muted">
+                    &#x422;&#x443;&#x440;&#x43D;&#x456;&#x440;&#x43D;&#x430; &#x442;&#x430;&#x431;&#x43B;&#x438;&#x446;&#x44F;
+                </a>
+            </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="home">
+            <div class="btn-toolbar">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn active btn-default btn-sm">
+                            <input type="radio" name="statement" value="html" autocomplete="off" checked> Html
+                        </label>
+                        <label class="btn btn-default btn-sm">
+                            <input type="radio" name="statement" value="pdf" autocomplete="off"> Pdf
+                        </label>
+                    </div>
+            </div>
+                <div id="block-pdf" style="display:none; margin-top:20px">
+                    <div class="embed-responsive embed-responsive-16by9">
+                            <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="/pdfjs-1.6.210-dist/web/viewer.html?file=/uk/ContestProblem/Pdf/134075#zoom=page-width"></iframe>
+    </div>
+
+                    </div>
+                </div>
+                <div id="block-html">
+                    
+<div class="container-fluid statement-html">
+
+    <p><h1 class="problem-name">&#x420;&#x435;&#x446;&#x435;&#x43F;&#x442;</h1></p>
+        <p><i>&#x41E;&#x431;&#x43C;&#x435;&#x436;&#x435;&#x43D;&#x43D;&#x44F;: 2 &#x441;&#x435;&#x43A;., 256 &#x41C;&#x456;&#x411;</i></p>
+
+    <p class="preserve-formatting"><p>Зеник хоче здивувати Марічку та спекти для неї торт. Але повар з
+нього поганий, тож він вирішив пошукати рецепт в інтернеті та знайшов
+такий дивний рецепт.</p>
+<p>Усього в Зеника є <span class="math inline">\(n\)</span>
+інгредієнтів. Спочатку <span class="math inline">\(i\)</span>-го
+інгредієнта є <span class="math inline">\(a_i\)</span> грамів. Далі в
+рецепті написано, що кожної хвилини Зеник повинен взяти два інгредієнти,
+змішати їх та залишити рівно половину суміші, іншу половину викинути. І
+так поки на столі не залишиться лише один інгредієнт. Це й буде
+заготовка для торта.</p>
+<p>Зеник також хоче спекти якнайбільший торт, щоб сильніше здивувати
+Марічку.</p>
+<p>Допоможіть Зенику та визначте, яку максимальну вагу може мати
+результуючий інгредієнт.</p>
+</p>
+
+        <p><h1>&#x412;&#x445;&#x456;&#x434;&#x43D;&#x456; &#x434;&#x430;&#x43D;&#x456;</h1></p>
+        <p class="preserve-formatting"><p>У першому рядку задано ціле число <span
+class="math inline">\(n\)</span> — кількість інгредієнтів.</p>
+<p>У другому рядку <span class="math inline">\(n\)</span> цілих чисел
+<span class="math inline">\(a_i\)</span> — маса <span
+class="math inline">\(i\)</span>-го інгредієнта в грамах.</p>
+</p>
+
+        <p><h1>&#x412;&#x438;&#x445;&#x456;&#x434;&#x43D;&#x456; &#x434;&#x430;&#x43D;&#x456;</h1></p>
+        <p class="preserve-formatting"><p>Виведіть єдине число — максимальну вагу заготовки. Вiдповiдь
+вважатиметься правильною, якщо її абсолютна чи вiдносна похибка не буде
+бiльшою нiж <span class="math inline">\(10^{-7}\)</span>.</p>
+</p>
+
+        <p><h1>&#x41E;&#x431;&#x43C;&#x435;&#x436;&#x435;&#x43D;&#x43D;&#x44F;</h1></p>
+        <p class="preserve-formatting"><p><span class="math inline">\(1 \le n \le 10^5\)</span>,</p>
+<p><span class="math inline">\(1 \le a_i \le 10^5\)</span>.</p>
+</p>
+
+        <p><h1>&#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;&#x438;</h1></p>
+
+<table class="table table-bordered sample-test-table">
+  <thead>
+    <tr>
+        <th class="col col-auto">
+          &#x412;&#x445;&#x456;&#x434;&#x43D;&#x456; &#x434;&#x430;&#x43D;&#x456; (stdin)
+          <button id="cp_i_70412_72443" type="button" class="btn btn-xs btn-light sample-test-copy btn-copy" data-target="i_70412_72443" data-success="&#x441;&#x43A;&#x43E;&#x43F;&#x456;&#x439;&#x43E;&#x432;&#x430;&#x43D;&#x43E;!">
+            &#x43A;&#x43E;&#x43F;&#x456;&#x44E;&#x432;&#x430;&#x442;&#x438;
+          </button>
+        </th>
+        <th class="col col-auto">
+          &#x412;&#x438;&#x445;&#x456;&#x434;&#x43D;&#x456; &#x434;&#x430;&#x43D;&#x456; (stdout)
+          <button id="cp_o_70412_72443" type="button" class="btn btn-xs btn-light sample-test-copy btn-copy" data-target="o_70412_72443" data-success="&#x441;&#x43A;&#x43E;&#x43F;&#x456;&#x439;&#x43E;&#x432;&#x430;&#x43D;&#x43E;!">
+            &#x43A;&#x43E;&#x43F;&#x456;&#x44E;&#x432;&#x430;&#x442;&#x438;
+          </button>
+        </th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr class="sample-test-content">
+        <td id="i_70412_72443">3&#xD;&#xA;4 7 4&#xD;&#xA;</td>
+        <td id="o_70412_72443">5.500000000</td>
+      </tr>
+  </tbody>
+</table>
+        <p><h1>&#x41F;&#x440;&#x438;&#x43C;&#x456;&#x442;&#x43A;&#x438;</h1></p>
+        <p class="preserve-formatting"><p>За першу хвилину Зеник змішує перший і третій інгредієнти й отримує
+новий інгредієнт вагою <span class="math inline">\({{4+4} \over 2} =
+4\)</span>. Тож тепер у Зеника є інгредієнт вагою 7 і інгредієнт вагою
+4. Зеник їх змішує й отримує фінальну заготовку вагою <span
+class="math inline">\({{7 + 4} \over 2} = 5.5\)</span>.</p>
+</p>
+</div>
+                </div>
+            <div id="mySolutions">
+                <table data-loading-font-size="14" data-page-list="" data-page-size="100" data-pagination="true" data-show-refresh="true" data-side-pagination="server" data-toggle="table" data-url-copy="/uk/ProblemSolution/DisplayList/134075?actions=4" id="ProblemSolution-DisplayList"><thead><th data-field="ElementType" data-visible="false">Element Type</th><th data-field="TimeCreated" data-formatter="app.table.formatter.date.fromNow">&#x421;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43E;</th><th data-field="Contestant" data-visible="false">&#x425;&#x442;&#x43E;</th><th data-field="Problem" data-visible="false">&#x417;&#x430;&#x434;&#x430;&#x447;&#x430;</th><th data-align="center" data-field="Compiler">&#x41A;&#x43E;&#x43C;&#x43F;&#x456;&#x43B;&#x44F;&#x442;&#x43E;&#x440;</th><th data-align="center" data-field="Result" data-formatter="app.table.formatter.url">&#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;</th><th data-align="right" data-field="TimePeak" data-formatter="app.table.formatter.double.fixed3">&#x427;&#x430;&#x441; (&#x441;&#x435;&#x43A;.)</th><th data-align="right" data-field="MemoryPeak" data-formatter="app.table.formatter.double.fixed3">&#x41F;&#x430;&#x43C;&#x27;&#x44F;&#x442;&#x44C; (&#x41C;&#x456;&#x411;)</th><th data-field="Id" data-visible="false">&#x2116;</th><th data-field="Actions" data-formatter="app.table.formatter.action.list">&#x414;&#x456;&#x457;</th></thead></table>
+            </div>
+        </div>
+    </div>
+</div>
+        </section>
+    </div>
+    <footer class="main-footer">
+    <div class="pull-right">
+        <span class=" hidden-xs">
+            &#x410;&#x43B;&#x433;&#x43E;&#x442;&#x435;&#x441;&#x442;&#x435;&#x440;
+            &nbsp;
+        </span>
+        <a target="blank" href="https://www.youtube.com/c/algotester"><i class="fa fa-lg fa-youtube-play"></i></a>
+        &nbsp;
+        <a target="blank" href="https://www.facebook.com/algotester"><i class="fa fa-lg fa-facebook-square"></i></a>
+        &nbsp;
+        <a target="blank" href="https://twitter.com/algotester"><i class="fa fa-lg fa-twitter-square"></i></a>
+        &nbsp;
+        <a target="blank" href="https://t.me/algotester"><i class="fa fa-lg fa-telegram"></i></a>
+    </div>
+    <div>
+        <strong>
+            <span class="hidden-xs">Copyright</span>
+            &copy; 2013-2024
+            &nbsp;-&nbsp;
+            <a href="/uk">algotester.com</a>.
+        </strong>
+        <span class="hidden-xs">
+            &nbsp;
+            All rights reserved.
+        </span> 
+    </div>
+</footer>
+
+    <script src="/js/bundle.min.js?v=dDYiBRTEpOhOrtafuGIbXveJPH0-xspDJAjJ-NiJggg"></script>
+    <script src="/js/signalr.js?v=JaaIIjNxL8QNOp32zMkcCPoV4kjeFtBonXoAMxopay4"></script>
+    <script src="/js/site.js?v=lzuoEay-_iOzuTo-1ObK6p6b8UvFbyIClAn4nqLOLuo"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+            TeX:{
+                Macros: {
+                    ss: "{\\beta}",
+                    noindent: "",
+                    item: "-"
+                }}
+        });
+    </script>
+    <script type="text/javascript" src="/js/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+    
+    <script type="text/javascript">
+    app.notice.data = [];
+</script>
+</div>
+</body>
+</html>
