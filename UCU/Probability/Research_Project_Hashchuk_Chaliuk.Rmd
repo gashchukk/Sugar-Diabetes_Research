@@ -1,0 +1,171 @@
+---
+title: 'P&S-2023: Project'
+author: "B. Hashchuk , O. Chaliuk"
+output:
+  html_document:
+    df_print: paged
+---
+
+## 
+
+## Investigating the Link Between Sugar Levels and Diabetes Risk
+
+Discover the intriguing findings of our data-driven investigation exploring the relationship between sugar levels and the probability of developing diabetes.
+
+Description:\
+    Diabetes is a global health concern affecting millions of people, and understanding its risk factors is crucial for prevention and management. Our research project aimed to investigate the correlation between sugar levels and the likelihood of developing diabetes, utilizing a comprehensive dataset and advanced statistical analysis techniques.\
+  We will present the statistical models highlighting the significance of variables such as sugar levels, insuline level, gender, and demographic characteristics in predicting diabetes risk.\
+    Join us in uncovering the intriguing relationship between sugar levels and the risk of diabetes, as we strive to enhance our understanding and make significant contributions to the field of diabetes research.
+
+### Agenda:
+
+In this research you will be able to see the next investigations about our dataset. You can find it in the "diabetes.csv" file.
+
+-   Calculated the **mean**, **median**, **mode**,**range**, **standard deviation**, and **variance** for each of the parameters
+
+-   Investigate how **multiple parameters** (**independent variables**) relate to the outcome variable (diabetes).
+
+-   Check whether **biases** **exist** in the dataset or the model predictions.
+
+-   Proove The **fairness** of the model's predictions across different demographic groups.
+
+-   Test hypotheses about the **relationship between individual parameters** and the **likelihood** of having diabetes.
+
+-   Examine the **distribution** of each variable.
+
+-   Explore **correlations** between **individual parameters** and the **outcome** variable.
+
+-   **Linear regression model**
+
+First, we wil start with the ...
+
+#### Testing hypotheses about the **relationship between individual parameters** and the **likelihood** of having diabetes...
+
+```{r}
+# Load the dataset
+data <- read.csv("diabetes.csv")
+
+# Split the dataset into two groups based on the outcome variable
+diabetes_group <- data[data$Outcome == 1, "Glucose"]
+non_diabetes_group <- data[data$Outcome == 0, "Glucose"]
+
+# Perform t-test
+t_test_result <- t.test(diabetes_group, non_diabetes_group)
+
+# Print the test result
+print(t_test_result)
+```
+
+```{r}
+# Load the dataset
+data <- read.csv("diabetes.csv")
+
+# Create a contingency table between a predictor variable and the outcome variable
+contingency_table <- table(data$Glucose, data$Outcome)
+
+# Perform chi-squared test
+chi_squared_test_result <- chisq.test(contingency_table)
+
+# Print the test result
+print(chi_squared_test_result)
+```
+
+#### Examine the **distribution** of each variable.
+
+```{r}
+# Load the dataset
+data <- read.csv("diabetes.csv")
+
+# Summarize the dataset
+summary(data)
+
+# Calculate the mean of each variable
+means <- colMeans(data)
+cat("Variable means:\n")
+print(means)
+
+# Calculate the standard deviation of each variable
+standard_deviations <- apply(data, 2, sd)
+cat("Variable standard deviations:\n")
+print(standard_deviations)
+
+# Create histograms for each variable
+par(mfrow = c(3, 3)) # Adjust the number of rows and columns as per your dataset size
+for (column in names(data)) {
+  hist(data[[column]], main = column, xlab = "Value")
+}
+```
+
+Based on the histograms, we can consider the general shape or distribution of each variable in the dataset. Here are some observations based on the histograms:
+
+1.  Pregnancies: The distribution appears to be skewed to the right, indicating that there are more instances of lower numbers of pregnancies.
+
+2.  Glucose: The distribution seems to be approximately normal with a peak around the middle values. It shows a relatively symmetric distribution.
+
+3.  BloodPressure: The distribution appears to be somewhat bell-shaped, but with a slight skewness. It shows a higher frequency of values around the middle range.
+
+4.  SkinThickness: The distribution seems to have a peak around zero or very low values, indicating a large number of instances with low skin thickness. It may have a right-skewed distribution.
+
+5.  Insulin: The distribution shows a peak around zero or very low values, suggesting a significant number of instances with low insulin levels. It may have a right-skewed distribution.
+
+6.  BMI: The distribution appears to be approximately normal with a peak around the middle values. It shows a relatively symmetric distribution.
+
+7.  DiabetesPedigreeFunction: The distribution is right-skewed, indicating that there are more instances with lower values of the diabetes pedigree function.
+
+8.  Age: The distribution appears to be right-skewed, indicating a higher frequency of younger individuals in the dataset.
+
+#### Explore **correlations** between **individual parameters** and the **outcome** variable.
+
+```{r}
+# Load the dataset
+data <- read.csv("diabetes.csv")
+
+# Calculate correlations
+correlations <- cor(data[, -9], data$Outcome)
+
+# Print the correlations
+print(correlations)
+```
+
+Based on the correlations calculated between the predictor variables and the outcome variable (likelihood of having diabetes), we can make the following observations:
+
+1.  Glucose: There is a positive correlation between glucose levels and the likelihood of having diabetes. **This suggests that higher glucose levels are associated with a higher probability of having diabetes.**
+
+2.  BloodPressure: The correlation between blood pressure and the likelihood of having diabetes is relatively weak. **It** **indicates that there is little to no linear relationship between blood pressure and the likelihood of diabetes.**
+
+3.  SkinThickness: The correlation between skin thickness and the likelihood of having diabetes is **relatively weak** as well. It implies that there is little to no linear relationship between skin thickness and the likelihood of diabetes.
+
+4.  Insulin: Similar to skin thickness, the correlation between insulin levels and the likelihood of having diabetes is r**elatively weak.** It suggests that there is little to no linear relationship between insulin levels and the likelihood of diabetes.
+
+5.  BMI: There is a positive correlation between body mass index (BMI) and the likelihood of having diabetes. **This indicates that higher BMI values are associated with a higher probability of having diabetes.**
+
+6.  DiabetesPedigreeFunction: The correlation between the diabetes pedigree function and the likelihood of having diabetes is positive but **relatively weak**. It suggests a slight positive relationship between the diabetes pedigree function and the likelihood of diabetes.
+
+7.  Age: There is a positive correlation between age and the likelihood of having diabetes. This suggests that older individuals tend to have a higher probability of having diabetes.
+
+From this we can assume that **some of these parameters almost don't affect on likelihood to have diabetes.**
+
+#### **Linear regression model**
+
+```{r}
+# Load the dataset
+data <- read.csv("diabetes.csv")
+
+# Perform linear regression
+model <- lm(Outcome ~ ., data = data)
+
+# Print the summary of the regression model
+summary(model)
+```
+
+1.  Glucose: The coefficient estimate for glucose is 0.0059203, with a low p-value (\< 2e-16), indicating a statistically significant positive relationship between glucose levels and the likelihood of having diabetes. **As glucose levels increase, the probability of having diabetes also tends to increase.**
+
+2.  BMI: The coefficient estimate for BMI is 0.0132440, with a very low p-value (3.85e-10). This suggests a statistically significant positive association between BMI and the likelihood of having diabetes. **Higher BMI values are associated with a higher probability of having diabetes.**
+
+3.  DiabetesPedigreeFunction: The coefficient estimate for the diabetes pedigree function is 0.1472374, with a low p-value (0.00113). This indicates a statistically significant positive relationship between the diabetes pedigree function and the likelihood of having diabetes. **Higher values of the diabetes pedigree function are associated with a higher probability of having diabetes.**
+
+4.  Age: The coefficient estimate for age is 0.0026214, with a p-value of 0.09092. Although the p-value is above the conventional threshold of 0.05, it is still worth noting that there may be a slight positive relationship between age and the likelihood of having diabetes. **Older individuals may have a slightly higher probability of having diabetes**.
+
+5.  Other variables: **The coefficients for pregnancies, blood pressure, skin thickness, and insulin** did not show statistically significant relationships with the likelihood of having diabetes, as their corresponding p-values were relatively high. **This suggests that these variables may not be strongly associated with the outcome in this model.**
+
+After thes calculatiions , we can again proove that **not every variable significantly affects on the result.**
